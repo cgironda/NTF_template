@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height:  100vh;
+    background-color: #f6f6f6;
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%230397f9' fill-opacity='0.13' fill-rule='evenodd'/%3E%3C/svg%3E");
+    color: black;
+    font-family: Rubik, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    display: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-container {
+    width: auto;
+    max-width: auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+    font-size: 2.75rem;
+}
+
+.quote-text-small {
+    font-size: 1.25rem;
+}
+
+/* The Cartoon Comes Here */
+.cartoon {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vmin;
+    height: 40vmin;
+}
+
+.cartoon div {
+    position: absolute;
+    box-sizing: border-box;
+}
+    
+.b {
+    border: 0.5vmin solid;
+}
+
+.r {
+    border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+content: "";
+display: block;
+position: absolute;
+box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+    --fur: #222;
+    --skin: #e3e3e0;
+    --nose: #c00;
+    --shirt: rgb(186, 234, 249);
+    --pants: #6edbfc;
+}
+
+.head_ears {
+    position: relative;
+    width: 32%;
+    height: 32%;
+    top: 16%;
+    left: 51%;
+    background: var(--skin);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: inset 0 5vmin 0 2vmin var(--fur);
+    z-index: -20;
+}
+
+.head {
+    position: relative;
+    width: 32%;
+    height: 32%;
+    top: 16%;
+    left: 35%;
+    background: var(--skin);
+    border-radius: 50%;
+    transform: initial;
+    box-shadow: inset 0 5vmin 0 2vmin var(--fur);
+    z-index: 0;
+    /* order: 1; */
+}
+
+.head::before {
+    width: 110%;
+    height: 38%;
+    background: var(--skin);
+    border-radius: 50%;
+    bottom: -1%;
+    left: -5%;
+}
+
+.eye {
+    width: 28%;
+    height: 32%;
+    background: var(--skin);
+    top: 20%;
+    left: 24%;
+    /* box-shadow: 3vmin 0 var(--skin); */
+}
+
+.eye + .eye {
+    transform: scaleX(-1) rotate(0deg);
+    left: 48%;
+    top: 20%;
+}
+
+.pupils {
+    width: 2vmin;
+    height: 2vmin;
+    background: var(--fur);
+    border-radius: 50%;
+    top: 40%;
+    left: 21%;
+    transform: translate(90%, -75%);
+}
+
+.pupils + .pupils {
+    transform: scaleX(-1) rotate(0deg);
+    left: 58%;
+    top: 28%;
+}
+
+.pupils_dot {
+    width: 0.5vmin;
+    height: 0.5vmin;
+    background: var(--skin);
+    border-radius: 50%;
+    top: 37%;
+    left: 41%;
+    transform: translate(90%, -75%);
+}
+
+.pupils_dot + .pupils_dot {
+    transform: scaleX(-1) rotate(0deg);
+    left: 68%;
+    top: 34%;
+}
+
+/* .eye::after {
+    width: 2vmin;
+    height: 2vmin;
+    background: var(--skin);
+    box-shadow: inset 0.7vmin -0.25vmin 0 0.7vmin var(--fur), 3.75vmin -0.25vmin 0 -0.7vmin var(--skin), 3vmin 0 var(--fur);
+    border-radius: 50%;
+    top: 66%;
+    left: -16%;
+    transform: translate(90%, -75%);
+} */
+
+.nose {
+    border-radius: 50% 50% 50% 50% / 100% 100% 50% 50%;
+    width: 10%;
+    height: 10%;
+    background: var(--nose);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dot-1 {
+    height: 2%;
+    width: 2%;
+    background: var(--fur);
+    border-radius: 50%;
+    top: 82%;
+    left: 88%;
+    transform: rotate(-90deg);
+}
+
+.dot-1 + .dot-1 {
+    transform: scaleX(-1) rotate(100deg);
+    left: 80%;
+    top: 88%;
+}    
+
+.mouth {
+	width: 55%;
+    height: 25%;
+	top: 78%;
+	left: 48%;
+	margin-left: -25%;
+	z-index: 2;
+	overflow: hidden;
+    transform: translate(0%, -10%);
+}
+
+.mouth:before{
+	content: "";
+	display: block;
+	left: -2%;
+	bottom: 60%;
+    position: absolute;
+	width: 50%;
+	height: 70%;
+	border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.mouth:after{
+	content: "";
+	display: block;
+	position: absolute;
+    left: 47%;
+	bottom: 60%;
+	border: 2px solid #000;
+	width: 50%;
+	height: 70%;
+	border-radius: 50%;
+} 
+
+.ear {
+    width: 60%;
+    height: 70%;
+    top: -16%;
+    left: -4%;
+    border-radius: 90% 0 90% 0;
+    transform: rotate(100deg);
+    overflow: hidden;
+    box-shadow: inset -14.5vmin 0 var(--fur);
+    overflow: hidden;
+    z-index: -5;
+    /* order: 2; */
+}
+
+.ear + .ear {
+    transform: scaleX(-1) rotate(100deg);
+    left: 44%;
+    top: -16%;
+}
+
+.ear_small {
+    width: 38%;
+    height: 44%;
+    top: 1%;
+    left: 8.5%;
+    border-radius: 90% 0 90% 0;
+    transform: rotate(100deg);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.ear_small + .ear_small {
+    transform: scaleX(-1) rotate(100deg);
+    left: 53%;
+    top: 0%;
+}
+
+.body {
+    height: 31%;
+    width: 8%;
+    background: var(--shirt);
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+    
+.body::before {
+    width: 30%;
+    height: 100%;
+    left: -20%;
+    background: var(--shirt);
+    transform: skewX(-3deg);
+    transform-origin: bottom right;
+}
+    
+.body::after {
+    width: 30%;
+    height: 100%;
+    right: -20%;
+    background: var(--shirt);
+    transform: skewX(3deg);
+    transform-origin: bottom left;
+}
+
+.shorts {
+    width: 10%;
+    height: 5%;
+    background: var(--pants);
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+    
+.shorts::before {
+    width: 60%;
+    height: 490%;
+    background: var(--pants);
+    transform-origin: top left;
+    transform: skewX(-5deg)
+}
+    
+.shorts::after {
+    right: 0;
+    width: 60%;
+    height: 490%;
+    background: var(--pants);
+    transform-origin: top right;
+    transform: skewX(5deg)
+}
+    
+.shoe {
+    width: 9%;
+    height: 4%;
+    background: var(--fur);
+    border-radius: 100% 50% 0 0;
+    bottom: 0;
+    left: 40%;
+    transform: skewX(-3deg);
+}
+    
+.shoe + .shoe {
+    left: auto;
+    right: 40%;
+    transform: scaleX(-1) skewX(-3deg);
+}
+    
+.sleeves {
+    width: 7%;
+    height: 7%;
+    background: var(--shirt);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    
+.sleeves::before,
+.sleeves::after {
+    width: 100%;
+    height: 200%;
+    background: var(--shirt);
+    transform: rotate(30deg);
+    left: -50%;
+    top: -20%;
+}
+    
+.sleeves::after {
+    transform: rotate(-40deg);
+    left: 50%;
+}
+    
+.arms {
+    width: 23%;
+    height: 30%;
+    border: 1.5vmin solid var(--fur);
+    border-bottom: 2vmin solid transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+    
+.arms::after {
+    width: 2.8vmin;
+    height: 2.8vmin;
+    background: var(--fur);
+    border-radius: 50%;
+    top: 86%;
+    left: 64%;
+}
+
+.hands {
+    width: 7%;
+    height: 7%;
+    background: var(--fur);
+    top: 72%;
+    left: 41%;
+}
+
+/* Media Query: Smartphones or Tablets */
+@media screen and (max-width: 1000px) {
+    .quote-container {
+        margin: auto 10px;
+    }
+
+    .quote-text {
+        font-size: 2.5rem;
+    }
+}

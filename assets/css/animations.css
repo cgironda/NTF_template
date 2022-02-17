@@ -1,0 +1,105 @@
+.movingHead {
+    animation: moveHead 3s infinite;
+}
+
+.movingShoe {
+    animation: moveShoe 0.6s infinite;
+}
+
+.movingEarRight {
+    animation: moveEarRight 3s infinite;
+}
+
+.movingEarLeft {
+    animation: moveEarLeft 3s infinite;
+}
+
+.movingHand {
+    animation: moveHand 1s infinite;
+}
+
+@keyframes moveHead {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    
+    30% {
+        transform:rotate(5deg);
+    }
+    
+    60% {
+        transform:rotate(-5deg);
+    }
+}
+
+@keyframes moveShoe {
+    0%, 100% {
+        transform: skewY(0deg);
+    }
+    
+    20% {
+        transform:skewY(5deg);
+    }
+    
+    40% {
+        transform:skewY(10deg);
+    }
+
+    60% {
+        transform:skewY(-10deg);
+    }
+
+    80% {
+        transform:skewY(-5deg);
+    }
+}
+
+@keyframes moveEarRight {
+    0%, 50% {
+        transform: rotate(100deg);
+    }
+    
+    25% {
+        transform: rotate(105deg);
+    }
+
+    100% {
+        transform: rotate(95deg);
+    }
+}
+
+@keyframes moveEarLeft {
+    0%, 50% {
+        transform: rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes moveHand {
+    0%, 100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    
+    12.5%, 87.5% {
+        transform: translate3d(0px, -1px, 0px);
+    }
+    
+    25%, 75% {
+        transform: translate3d(0px, -2px, 0px);
+    }
+
+    37.5%, 62.5% {
+        transform: translate3d(0px, -3px, 0px);
+    }
+    
+    50% {
+        transform: translate3d(0px, -4px, 0px);
+    }
+}
